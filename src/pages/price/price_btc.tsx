@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
+const API_URL = import.meta.env.VITE_API_URL;
 
 export function BTCPrice() {
   const [price, setPrice] = useState(0);
 
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:8000/ws/btc");
+    const ws = new WebSocket(`ws:${API_URL}/ws/btc`);
 
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
