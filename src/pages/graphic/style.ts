@@ -5,7 +5,7 @@ export const ChartContainer = styled.div`
   border-radius: 12px;
   padding: 20px;
   margin-top: 20px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 15px rgba(6, 6, 6, 0.4);
 `;
 
 export const Title = styled.h2`
