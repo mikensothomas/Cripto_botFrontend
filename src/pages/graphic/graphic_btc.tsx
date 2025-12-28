@@ -30,7 +30,7 @@ export function BtcChart() {
 
   useEffect(() => {
     // Substitua pela URL pública do seu backend no Render
-    const ws = new WebSocket("wss://https://cripto-botbackend.onrender.com/ws/btc");
+    const ws = new WebSocket("wss://cripto-botbackend.onrender.com/ws/btc");
 
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
