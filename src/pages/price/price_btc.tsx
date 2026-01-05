@@ -5,10 +5,7 @@ export function BTCPrice() {
   const [price, setPrice] = useState(0);
 
   useEffect(() => {
-    // const wsUrl = `${API_URL.replace(/^http/, 'ws')}/ws/btc`;
-    const wsUrl = API_URL.startsWith('https')
-      ? API_URL.replace('https', 'wss') + '/ws/btc'
-      : API_URL.replace('http', 'ws') + '/ws/btc';
+    const wsUrl = `${API_URL.replace(/^http/, 'ws')}/ws/btc`;
 
     const ws = new WebSocket(wsUrl);
 
